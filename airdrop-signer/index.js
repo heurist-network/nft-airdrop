@@ -11,7 +11,7 @@ const adminWallet = new ethers.Wallet(adminPrivateKey)
 async function signClaimantAddresses() {
     const results = []
     for (let address of claimantAddresses) {
-        const hash = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["address"], [address]));
+        const hash = ethers.solidityPackedKeccak256(["address"], [address]);
         const signature = await adminWallet.signMessage(ethers.getBytes(hash));
 
         console.log(`Address: ${address}`);
