@@ -10,7 +10,7 @@ contract HeuristImaginaries is ERC721Enumerable, Ownable {
     using Strings for uint256;
 
     mapping(bytes => bool) public signatureUsed;
-    uint256 public constant MAX_SUPPLY = 500;
+    uint256 immutable MAX_SUPPLY = 500;
     string private baseTokenURI;
 
     event Claimed(address indexed recipient, uint256 indexed tokenId);
