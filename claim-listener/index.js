@@ -62,7 +62,7 @@ function handleClaimed(recipient, tokenId, event) {
 
     const uploadParams = {
         Bucket: BUCKET_NAME,
-        Key: `${tokenId}.json`,
+        Key: `${tokenId}`, // fix: no .json
         Body: jsonString,
         ContentType: "application/json"
     };

@@ -19,3 +19,4 @@ $ forge compile
 forge script script/Deploy.s.sol:DeploySepolia --rpc-url sepolia --broadcast --verify
 
 # deploy on mainnet
+forge script script/Deploy.s.sol:DeployMainnet --rpc-url mainnet --broadcast --verify
